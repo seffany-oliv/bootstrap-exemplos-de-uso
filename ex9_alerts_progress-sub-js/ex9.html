@@ -17,10 +17,11 @@
         <!-- ================================
              BOTÕES DE CONTROLE DOS ALERTS
              ================================ -->
-
-
-        <!-- 1ª Digitação (Aqui) -->
-
+    <div class= mb-3">
+     <button class="btn btn-success me-2" onclick="mostrarSucesso()">Mostrar sucesso</button>
+     <button class="btn btn-danger me-2" onclick="mostrarErro()">Mostrar Erro</button>
+     <button class="btn btn-warning" onclick="mostrarToast()">Mostrar Toast</button>
+    </div>
 
         <!-- ================================
              ALERT DE SUCESSO
@@ -28,10 +29,10 @@
              O JS adiciona "show" ao clicar no botão.
              ================================ -->
 
-
-
-        <!-- 2ª Digitação (Aqui) -->
-
+     <div class="alert alert-success alert-dismissible fade" id="successAlert">
+          <strong>Sucesso!</strong>Opereção realizeda com sucesso!
+          <button class="bnt-close" type="button" onclick="fecharAlert()"></button>
+     </div>
 
 
         <!-- ================================
@@ -49,12 +50,18 @@
              O JS usa a classe Bootstrap Toast para exibir/ocultar.
              ================================ -->
 
-
-
-        <!-- 3ª Digitação (Aqui) -->
-
-
-
+     <div class="position-fixed top-0 end-0 p-3" style="z-index: 10;;">
+          <div id="liveToast" class="toast" role="alert" aria-atomic="true">
+               <div class="toast-header">
+                    <strong class="me-auto">Notificação</strong>
+                    <small>Agora</small>
+                    <button class="btn-close" type="button" data-bs-dismiss="toast"></button>
+               </div>
+               <div class="toast-body">
+                    Esta é uma mensagem de toast!
+               </div>
+          </div>
+     </div>
 
         <!-- ================================
              BARRA DE PROGRESSO
@@ -76,14 +83,16 @@
              CONTROLES DA BARRA DE PROGRESSO
              Botões para aumentar/diminuir e ligar/desligar a animação.
              ================================ -->
+        <div class="btn-group me-2">
+          <button class="btn btn-primary" onclick="updateProgress(-10)">-10%</button>
+        </div>
+        <div class="btn-group me-2">
+          <button class="btn btn-primary" onclick="updateProgress(10)">+10%</button>
+        </div>
 
-
-
-
-        <!-- 4ª Digitação (Aqui) -->
-
-        
-
+     <button class="btn btn-success" id="toggleAnimationBtn" onclick="toggleAnimacao()">
+          Ligar animação
+     </button>
 
     </div>
 
